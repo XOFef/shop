@@ -1,13 +1,14 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/product.dart';
 import 'package:flutter_application_2/var.dart';
 
 
 
-class Human extends StatelessWidget {
-  Human({super.key, required this.index});
+class CardOfProduct extends StatelessWidget {
+  CardOfProduct({super.key, required this.index});
 
-  int index;
+  final int index;
 
 
   @override
@@ -90,51 +91,85 @@ class Human extends StatelessWidget {
                                            //color: Colors.red,
                                           ),
 
+                                Expanded(
+                                  flex:1,
+                                  child: 
                                  Container(
-                                           width: MediaQuery.of(context).size.width * 0.35,
+
                                            color: Colors.red,
                                            child: Image.network(url),
                                           ),  
+                                ),
+
+                                  SizedBox(width: 25),
 
                                   Container(
-                                           width: MediaQuery.of(context).size.width * 0.04,
-                                           //color: Colors.red,
-                                          ),   
-
-                                  Container(
-                                           width: MediaQuery.of(context).size.width * 0.45,
+                                           width: MediaQuery.of(context).size.width * 0.5,
                                            height: MediaQuery.of(context).size.width * 1,
                                            //color: Colors.red,
                                            child: Column(
                                                         children: <Widget>[
 
-                                                          Container(
-                                                                     width: MediaQuery.of(context).size.width * 0.45,
-                                                                     height: MediaQuery.of(context).size.width * 0.06,
-                                                                     //color: Colors.green,
-                                                                      child: Text(
-                                                                                  "${people[index].cost}",
-                                                                                  style: const TextStyle(fontSize: 22),
-                                                                                  ),
-                                                          ),
+                                                    
 
-                                                          Container(
-                                                                     width: MediaQuery.of(context).size.width * 0.45,
-                                                                     height: MediaQuery.of(context).size.width * 0.24,
+                                                          Expanded(flex:1,
+                                                            child: ListView(
+                                                              children: <Widget>[
+                                                            Container(
+                                                                     //width: MediaQuery.of(context).size.width * 0.45,
+                                                                     //height: MediaQuery.of(context).size.width * 0.24,
                                                                      //color: Colors.black,
                                                                       child: Text(
                                                                                   "${people[index].phone}",
                                                                                   style: const TextStyle(fontSize: 14),
                                                                                   ),
+                                                          ),]
+                                                          ),
                                                           ),
 
                                                           Container(
-                                                                     width: MediaQuery.of(context).size.width * 0.45,
+                                                                     width: MediaQuery.of(context).size.width * 0.5,
                                                                      height: MediaQuery.of(context).size.width * 0.1,
-                                                                      decoration: BoxDecoration(                                                                           
-                                                                                               borderRadius: BorderRadius.circular(16),
-                                                                                               color: Color.fromRGBO(54, 120, 167, 1),
-                                                                                                ),
+                                                                    child: Row(
+                                                                      children: <Widget>[
+
+                                                                        Expanded(flex:1,
+                                                                        child: Container(
+                                                                         // width: MediaQuery.of(context).size.width * 0.2,
+                                                                         // color: Colors.black,
+                                                                          child: Text(
+                                                                                           "${people[index].cost} руб.",
+                                                                                          style: const TextStyle(fontSize: 16),
+                                                                                        ),
+                                                                        ),
+                                                                        ),
+
+                                                                        SizedBox(width: 5,),
+
+
+                                                                        Container(
+                                                                          width: MediaQuery.of(context).size.width * 0.25,
+                                                                          //color: Colors.amber
+                                                                           decoration: BoxDecoration( 
+                                                                                                             borderRadius: BorderRadius.circular(16),
+                                                                                                             color: Color.fromRGBO(54, 120, 167, 1)
+                                                                                                                          ),
+                                                                            child: TextButton(
+                                                                                                      style: ButtonStyle(
+                                                                                                      foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                                                                                                    ),
+                                                                                                    onPressed: () {Navigator.push(
+                    context,
+
+                    MaterialPageRoute(builder: (context) =>  prod(index: index,)),
+
+                    );},
+                                                                                                    child: Text('Купить'),
+                                                                                                  )                                   
+                                                                          ),
+                                       
+                                                                      ],
+                                                                    ),
                                                                       
                                                           ),
                                                         ],

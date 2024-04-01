@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/people.dart';
+import 'package:flutter_application_2/card.dart';
+import 'package:flutter_application_2/personal_page.dart';
 import 'package:flutter_application_2/var.dart';
 
 
@@ -17,20 +18,56 @@ class FirstPage extends StatefulWidget {
 class Page extends State<FirstPage> {
 var MainColor= Color.fromRGBO(54, 120, 167, 1);
   
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: MainColor,
-        title: const Center(
-          child: Text('GiftShop',
+        title: 
+       Text('GiftShop',
           style: TextStyle(
               color: Colors.white,
               fontSize: 32,
               fontWeight: FontWeight.bold
           ),
-          ),
+          
         ),
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                    context,
+
+                    MaterialPageRoute(builder: (context) =>  Second()),
+
+                    );
+                                      },
+                                      icon: const Icon(
+                                      size: 27,
+                                      Icons.person,
+                                      color: Colors.white,
+                                      )
+                                      ),
+
+                                       IconButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                    context,
+
+                    MaterialPageRoute(builder: (context) =>  Second()),
+
+                    );
+                                      },
+                                      icon: const Icon(
+                                      size: 27,
+                                      Icons.shopping_bag,
+                                      color: Colors.white,
+                                      )
+                                      ),
+        ],
       ),
       body: Container(
         //color: Colors.red,
@@ -83,12 +120,12 @@ var MainColor= Color.fromRGBO(54, 120, 167, 1);
               ),
             ),
 
-
             Container(
               height: MediaQuery.of(context).size.height * 0.8,
               width: MediaQuery.of(context).size.width * 0.98,
               //color: Colors.amber,
               child:
+          
                   Center(
                     child:Container( 
                       width: MediaQuery.of(context).size.width * 1,
@@ -98,19 +135,26 @@ var MainColor= Color.fromRGBO(54, 120, 167, 1);
                         child: ListView.builder(
                             itemCount: people.length,
                             itemBuilder: (BuildContext context, index) {
-                              return Human(index: index);
+                              return CardOfProduct(index: index);
                             }
                             )
                             )
                             )
+                  
                   ),
+            
             ),
+            
+            
           ],
         ),
+        
         ),
+      
         ],
         ),
-      ),    
+      ),
+       
     );
   }
 }

@@ -6,8 +6,8 @@ class Person {
 }
 Person chipi = Person()
   ..name = "Keqing "
-  ..phone = "Самая лучшая в мире геншина"
-  ..cost = 5000
+  ..phone = "Самая лучшая в мире Genshin Impact женщина. Она известна своими невероятными навыками дипломатии, она великолепно разбирается в экономике и политике, а также имеет несравненные боевые навыки. Величественная обладательница Электро глаза бога, живущая в пределах Ли Юэ, всегда верна своим принципам и идеалам, полностью оправдывая свой титул Нефритового равновесия Цисин. Вы можете приобрести фигурку лучшего в мире качества в нашем превосходном магазине GiftShop."
+  ..cost = 25000
   ..description = null;
 
 Person chapa = Person()
@@ -108,6 +108,6 @@ Person klee = Person()
 final List<Person> people = <Person>[chipi, chapa, dubi, daba, boom, kirill, maks, klee, kristya, serega, alina, kurator, jorg, timofey, olya, abramov, artem, asya, danya, slavyanin];
 
 String url =
-    'https://img2.reactor.cc/pics/thumbnail/post-4849675.jpg';
+    'https://i.ytimg.com/vi/CsrCGhm6-Kg/maxresdefault.jpg';
 
 final List<Person> favorite = <Person>[];
