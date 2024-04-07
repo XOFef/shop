@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/login_in.dart';
 
-import 'package:flutter_application_2/login_up.dart';
 
 
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const login(),
+      home: const loginIn(),
     );
   }
 }

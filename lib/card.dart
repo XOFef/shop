@@ -161,7 +161,7 @@ class CardOfProduct extends StatelessWidget {
                                                                                                     onPressed: () {Navigator.push(
                     context,
 
-                    MaterialPageRoute(builder: (context) =>  prod(index: index,)),
+                    MaterialPageRoute(builder: (context) =>  Contact(index: index,)),
 
                     );},
                                                                                                     child: Text('Купить'),

@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/catalog.dart';
+
 
 import 'package:flutter_application_2/var.dart';
 
-class prod extends StatelessWidget {
-   prod({super.key, required this.index});
+class Contact extends StatelessWidget {
+   Contact({super.key, required this.index});
 var MainColor= Color.fromRGBO(54, 120, 167, 1);
 int index;
   @override
@@ -121,7 +121,7 @@ int index;
                                                                                                     onPressed: () {Navigator.push(
                     context,
 
-                    MaterialPageRoute(builder: (context) =>  FirstPage()),
+                    MaterialPageRoute(builder: (context) =>  Contact(index: index,)),
 
                     );},
                                                                                                     child: Text('В корзину',

@@ -8,7 +8,6 @@ class login extends StatelessWidget {
   const login({super.key});
 
 final _sizeTextBlack = const TextStyle(fontSize: 20.0, color: Colors.black);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +21,8 @@ final _sizeTextBlack = const TextStyle(fontSize: 20.0, color: Colors.black);
               fontWeight: FontWeight.bold
           ),
           
-        )
+        ),
+        automaticallyImplyLeading: false,
       ),
       
       body: Row(
@@ -64,6 +64,7 @@ final _sizeTextBlack = const TextStyle(fontSize: 20.0, color: Colors.black);
                     decoration:  InputDecoration(labelText: "Имя"),
                     keyboardType: TextInputType.emailAddress,
                     style: _sizeTextBlack ,
+                    
                   ),
     ),
 
@@ -72,6 +73,15 @@ final _sizeTextBlack = const TextStyle(fontSize: 20.0, color: Colors.black);
   Container(
   child:  TextFormField(
                     decoration:  InputDecoration(labelText: "Отчество"),
+                    keyboardType: TextInputType.emailAddress,
+                    style: _sizeTextBlack ,
+                  ),
+    ),
+        SizedBox(height: 20,),
+
+     Container(
+  child:  TextFormField(
+                    decoration:  InputDecoration(labelText: "День рождения"),
                     keyboardType: TextInputType.emailAddress,
                     style: _sizeTextBlack ,
                   ),
@@ -97,15 +107,7 @@ final _sizeTextBlack = const TextStyle(fontSize: 20.0, color: Colors.black);
                   ),
     ),
 
-     SizedBox(height: 20,),
-
-     Container(
-  child:  TextFormField(
-                    decoration:  InputDecoration(labelText: "День рождения"),
-                    keyboardType: TextInputType.emailAddress,
-                    style: _sizeTextBlack ,
-                  ),
-    ),
+ 
 
     SizedBox(height: 20,),
 

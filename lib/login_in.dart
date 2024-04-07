@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/catalog.dart';
+import 'package:flutter_application_2/login_up.dart';
 
 class loginIn extends StatelessWidget {
   const loginIn({super.key});
@@ -88,6 +89,29 @@ final _sizeTextBlack = const TextStyle(fontSize: 20.0, color: Colors.black);
                                                                                       child: Text('Авторизоваться',
                                                                                        style: TextStyle(fontSize: 18)),
                                                                                                   )
+    ),
+    Container(
+
+  child: Center(
+    child: TextButton(
+                                                                                                      style: ButtonStyle(
+                                                                                                      foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                                                                                                    ),
+                                                                                                    onPressed: () {Navigator.push(
+                    context,
+
+                    MaterialPageRoute(builder: (context) =>  login()),
+
+                    );},
+    child: Text('Нет аккаунта',
+                       style: TextStyle(fontSize: 14,
+                       color: Colors.grey,
+                       decoration: TextDecoration.underline,
+                       decorationColor: Colors.grey,
+                       )
+                       ),
+  ),
+    ),
     ),
 
 
