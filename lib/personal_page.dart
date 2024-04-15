@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/basket.dart';
 import 'package:flutter_application_2/catalog.dart';
 import 'package:flutter_application_2/favorit.dart';
 import 'package:flutter_application_2/login_in.dart';
@@ -49,7 +50,7 @@ class PersonalPage extends StatelessWidget {
                                         Navigator.push(
                     context,
 
-                    MaterialPageRoute(builder: (context) =>  PersonalPage()),
+                    MaterialPageRoute(builder: (context) =>  basket()),
 
                     );
                                       },

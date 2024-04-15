@@ -118,12 +118,9 @@ int index;
                                                                                                       style: ButtonStyle(
                                                                                                       foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                                                                                                     ),
-                                                                                                    onPressed: () {Navigator.push(
-                    context,
-
-                    MaterialPageRoute(builder: (context) =>  Contact(index: index,)),
-
-                    );},
+                                                                                                    onPressed: () {
+                                                                                                      favorite.add(people[index],);
+                                                                                                    },
                                                                                                     child: Text('В корзину',
                                                                                                     style: TextStyle(fontSize: 20)),
                                                                                                   ),                                  

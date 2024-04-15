@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/basket.dart';
 import 'package:flutter_application_2/card.dart';
 import 'package:flutter_application_2/personal_page.dart';
 import 'package:flutter_application_2/var.dart';
@@ -56,7 +57,7 @@ var MainColor= Color.fromRGBO(54, 120, 167, 1);
                                         Navigator.push(
                     context,
 
-                    MaterialPageRoute(builder: (context) =>  PersonalPage()),
+                    MaterialPageRoute(builder: (context) =>  basket()),
 
                     );
                                       },
